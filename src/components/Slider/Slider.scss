@@ -1,0 +1,26 @@
+body{
+    margin: 0;
+}
+.sliderParent{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 5em;
+    height: 70vh;
+    align-items: center;
+    margin-top: 5%;
+    .image{
+        width: 75%;
+        height: 100%;
+        position: absolute;
+        opacity: 0;
+        transition: .5s;
+        box-shadow: 0 0 5px #ddd;
+        border-radius: 5px;
+        object-fit: cover;
+    }
+    .image.active{
+        opacity: 1;
+    }
+    
+}
