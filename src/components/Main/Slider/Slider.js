@@ -1,5 +1,5 @@
 import React from "react";
-import { SliderList } from "../../utils"; 
+import { SliderList } from "../../../utils/utils"; 
 import './Slider.scss'
 import { Btn } from "./Button";
 

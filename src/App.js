@@ -1,15 +1,27 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header';
-import { Layout } from './pages/Layout';
+import { Routes, Route, Navigate } from 'react-router-dom'
+import PrivateRoutes from './components/PrivateRoutes';
+import Main from './pages/Main';
+import Register from './pages/Register';
+import Login from './pages/Login';
+import Basket from './pages/Basket';
+import Favorites from './pages/Favorites';
 
 function App() {
   return (
-    <React.Fragment>
-      <Header/>
-      <Layout/>
-      
-    </React.Fragment>
+    <>
+      <Routes>
+        {/* <Route element={<PrivateRoutes/>}> */}
+          <Route path='/' element={<Main/>}/>
+          <Route path='*' element={<Navigate to="/"/>}/>
+        {/* </Route> */}
+        <Route path='/auth/register' element={<Register/>}/>
+        <Route path='/auth/login' element={<Login/>}/>
+        <Route path='/basket' element={<Basket/>}/>
+        <Route path='/favorites' element={<Favorites/>}/>
+      </Routes>
+    </>
   );
 }
 

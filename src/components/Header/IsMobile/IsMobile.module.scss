@@ -1,0 +1,57 @@
+.header{
+  width: 100%;
+  height: auto;
+  background: linear-gradient(0deg, rgba(18, 18, 18, 0.2), rgba(18, 18, 18, 0.2)), url(https://avatars.mds.yandex.net/get-images-cbir/372622/qy5g4aVaZ7KKDbrVOIRplQ40/ocr) center / cover;
+  .navbar{
+    width: 99%;
+    height: 100vh;
+    padding-top: 10px;
+  }
+  h1{
+    margin: 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 37px;
+    line-height: 87.3%;
+    padding: 15px;
+    margin-top: 30%;
+    text-align: center;
+    color: #FFFDF5;
+  }
+  p{
+    margin: 0;
+    font-size: 14px;
+    line-height: 118%;
+    text-align: center;
+    color: #FFFDF5;
+  }
+  .searchInput{
+    padding: 0 30px;
+    width: 94%;
+    display: flex;
+    justify-content: center;
+    margin: 0 10px;
+    height: 35px;
+    background: #FFFDF5;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    &::placeholder{
+      position: absolute;
+      width: 45px;
+      height: 25px;
+      left: 30px;
+      top: 9px;
+      font-size: 15px;
+      color: #7D7D7D;
+    }
+  }
+  .searchIcon{
+    position: absolute;
+    left: 5%;
+    right: 13%;
+    top: 20px;
+    bottom: 19.44%;
+    z-index: 10;
+  }
+}
