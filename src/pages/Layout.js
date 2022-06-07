@@ -4,6 +4,7 @@ import { getProduct } from "../components/DB";
 import { Slider } from "../components/Slider/Slider";
 import cls from './Layout.module.scss'
 import {BsArrowDown} from 'react-icons/bs'
+import { Order } from "../components/Ordering";
 
 export const Layout = () => {
     return (
@@ -12,26 +13,20 @@ export const Layout = () => {
 
             <div className={cls.container}>
                 <div className={cls.row}>
-                {/* {
-                    CardList.map(item => {
-                    // <Card key={item.id} image={item.image}/>
-                    // <Card/>
-                    
-                    })
-                } */}
-                {
-                            getProduct().map(item => <Card key={item.id} base = {item}/>)
-                }
+                    {
+                        getProduct().map(item => <Card key={item.id} base = {item}/>)
+                    }
                 </div>    
             </div>
 
             <div className={cls.more}>
                 <div className={cls.text}>
-                    <p>Еще</p>
+                    <p>Еще</p> 
                     <p><BsArrowDown/></p>
                 </div>
             </div>
 
+            <Order/>
         </div>
     )
 }

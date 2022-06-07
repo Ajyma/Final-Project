@@ -1,4 +1,4 @@
-import react from "react";
+import React , {useMedisQuery} from "react";
 import cls from './Card.module.scss'
 import {BsHeart} from 'react-icons/bs'
 import {AiOutlineShoppingCart} from 'react-icons/ai'
