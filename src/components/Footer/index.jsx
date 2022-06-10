@@ -20,7 +20,6 @@ const Footer = () => {
         <p>
           <FaRegCopyright/>
           2022
-          by ...
           All Rights Reserved
         </p>
       </div>

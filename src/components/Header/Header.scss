@@ -139,9 +139,11 @@
     justify-content: space-between;
     .first_block{
       h1{
+        margin: 30px 0;
         font-weight: 300;
         font-size: 39px;
         line-height: 52px;
+        text-align: left;
         span{
           font-style: italic;
         }
