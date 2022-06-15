@@ -4,10 +4,10 @@ import { IoManOutline } from 'react-icons/io5'
 import { MdChildCare } from 'react-icons/md'
 import { GiConverseShoe } from 'react-icons/gi'
 
-const List = ({isToggle, toggleNav}) => {
+const List = ({isToggle, toggle}) => {
   return (
     <div className={isToggle ? 'mob-menu active' : 'mob-menu'}>
-      <span onClick={toggleNav} className='close'>&times;</span>
+      <span onClick={toggle} className='close'>&times;</span>
       <ul className='list'>
         <li> <span><IoWomanOutline/></span> Женщинам</li>
         <li> <span><IoManOutline/></span> Мужчинам</li>

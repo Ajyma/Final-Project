@@ -6,13 +6,14 @@ body{
     justify-content: center;
     position: relative;
     margin-top: 5em;
-    height: 70vh;
+    height: 40vh;
     align-items: center;
     margin-top: 5%;
     .image{
         width: 75%;
         height: 100%;
         position: absolute;
+        border-radius: 30px;
         opacity: 0;
         transition: .5s;
         box-shadow: 0 0 5px #ddd;
@@ -22,5 +23,10 @@ body{
     .image.active{
         opacity: 1;
     }
-    
+    @media screen and (min-width: 768px) {
+        height:60vh;
+    }
+    @media screen and (min-width: 1024px) {
+        height:70vh;
+    }
 }

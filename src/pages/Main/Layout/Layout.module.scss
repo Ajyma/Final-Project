@@ -1,0 +1,31 @@
+.layout{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3% 0;
+    .row{
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+  }
+  .more{
+    display: flex;
+    justify-content: center;
+    .text{
+      padding: 10px 15px;
+      border: 1px solid black;
+      border-radius: 50%;
+      .textMore{
+        font-size: 20px;
+      }
+    }
+  }
+}
