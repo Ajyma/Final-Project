@@ -1,12 +1,11 @@
 .navbarTablet{
   display: flex;
   justify-content: space-between;
-  margin-bottom: 3rem;
   padding: 2rem 5rem;
   .bars{
     font-size: 20px;
     cursor: pointer;
-    @media (min-width: 1440px) {
+    @media (min-width: 1540px) {
       font-size: 30px;
     }
     @media (min-width: 1540px) {
@@ -16,9 +15,6 @@
   .searchIcon{
     padding-top: 5px;
     font-size: 20px;
-    @media (min-width: 1440px) {
-      font-size: 30px;
-    }
     @media (min-width: 1540px) {
       font-size: 50px;
     }
@@ -39,9 +35,6 @@
   span{
     padding-left: 20px;
     cursor: pointer;
-    @media (min-width: 1440px) {
-      font-size: 30px;
-    }
     @media (min-width: 1540px) {
       font-size: 50px;
     }
