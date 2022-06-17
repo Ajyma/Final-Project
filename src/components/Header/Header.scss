@@ -1,4 +1,4 @@
-.mob-menu{
+.mob-menu, .tablet-menu{
   color: white;
   position: fixed;
   background-color: #121212;
@@ -36,7 +36,13 @@
     cursor: pointer;
   }
 }
-.mob-menu.active{
+.tablet-menu{
+  width: 300px;
+  ul{
+    margin: 5rem 4rem;
+  }
+}
+.mob-menu.active, .tablet-menu.active{
   left: 0;
   z-index: 999;
 }
@@ -132,8 +138,15 @@
 
 
 .headerTablet{
+  height: 80vh;
   margin-top: -3rem;
   padding: 2rem 5rem;
+  @media (min-width: 1440px) {
+    height: 40vh;
+  }
+  @media (min-width: 2560px) {
+    height: 60vh;
+  }
   .block{
     display: flex;
     justify-content: space-between;
@@ -144,24 +157,51 @@
         font-size: 39px;
         line-height: 52px;
         text-align: left;
-        span{
-          font-style: italic;
+        @media (min-width: 1440px) {
+          font-size: 50px;
         }
       }
       p{
         color: #7D7D7D;
+        @media (min-width: 1440px) {
+          font-size: 35px;
+        }
       }
       img{
-        width: 200px;
-        height: 180px;
+        width: 250px;
+        height: 150px;
         object-fit: cover;
+        @media (min-width: 1440px) {
+          width: 400px;
+          height: 350px;
+        }
+        @media (min-width: 1540px) {
+          width: 500px;
+          height: 450px;
+        }
+        @media (min-width: 2560px) {
+          width: 900px;
+          height: 850px;
+        }
       }
     }
     .second_block{
       img{
-        width: 280px;
-        height: 270px;
+        width: 300px;
+        height: 290px;
         object-fit: cover;
+        @media (min-width: 1440px) {
+          width: 500px;
+          height: 500px;
+        }
+        @media (min-width: 1540px) {
+          width: 650px;
+          height: 650px;
+        }
+        @media (min-width: 2560px) {
+          width: 1000px;
+          height: 1000px;
+        }
       }
     }
   }

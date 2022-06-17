@@ -3,36 +3,27 @@
   padding: 0;
   border: 0;
   outline: 0;
-  position: relative;
   form{
     padding: 10%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 50px;
+    justify-content: center;
+    width: 100%;
+    .container{
+      text-align: center;
+      width: 100%;
+    }
     h1{
       margin: 0;
+      margin-top: 3rem;
+      width: 100% !important;
       text-align: center;
-      width: 240px;
-      height: 24px;
-      font-style: normal;
-      font-weight: 300;
-      font-size: 40px;
-      line-height: 40%;
+      font-size: 30px !important;
       color: #121212;
-    }
-    input{
-      border-bottom: 0.5px solid #7D7D7D;
-      width: 80% !important;
-      &::placeholder{
-        color: #7D7D7D;
-      }
       @media (min-width: 768px) {
-        width: 40% !important;
+        font-size: 40px;
       }
-    }
-    .error{
-      color: red;
     }
     div{
       display: flex;
@@ -40,9 +31,11 @@
       align-items: center;
       @media (min-width: 768px) {
         flex-direction: row;
-        width: 70%;
-        justify-content: center;
-        gap: 10px;
+        width: 40%;
+        justify-content: space-between;
+      }
+      @media (min-width: 1440px) {
+        width: 30%;
       }
       width: 39%;
       button{
@@ -53,10 +46,6 @@
         font-size: 15px;
         height: 37px;
         border: 0.5px solid #514A7E;
-      }
-      .go{
-        background-color: #514A7E;
-        color: #fff;
       }
     }
   }

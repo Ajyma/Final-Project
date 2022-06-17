@@ -1,7 +1,6 @@
 import React from 'react'
 import cls from './IsMobile.module.scss'
 import { AiOutlineSearch } from 'react-icons/ai'
-import { GrLinkNext } from 'react-icons/gr'
 import FooterMobile from '../FooterMobile'
 
 const isMobile = () => {

@@ -1,7 +1,7 @@
 import React from 'react'
-import Navbar from '../../components/Header/Navbar/Navbar'
+import Navbar from '../../../components/Header/Navbar/Navbar'
 import { useMediaQuery } from 'react-responsive'
-import IsMobile from '../../components/Header/IsMobile'
+import IsMobile from '../../../components/Header/IsMobile'
 import cls from './Basket.module.scss'
 
 const Basket = () => {
