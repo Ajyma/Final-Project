@@ -8,11 +8,14 @@ footer{
     height: 16vh;
   }
   @media (min-width: 1540px) {
-    height: 8vh;
+    height: 10vh;
   }
   h2{
     margin: 0;
     text-align: left;
+    @media (min-width: 1440px) {
+      font-size: 50px;
+    }
   }
   .icons{
     margin: 1rem 0;
@@ -21,6 +24,14 @@ footer{
     span{
       margin: 0 10px;
       font-size: 20px;
+      @media (min-width: 1440px) {
+        font-size: 50px;
+      }
+    }
+  }
+  p{
+    @media (min-width: 1440px) {
+      font-size: 40px;
     }
   }
 }

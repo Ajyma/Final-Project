@@ -38,8 +38,29 @@
 }
 .tablet-menu{
   width: 300px;
+  @media (min-width: 1440px) {
+    width: 600px;
+  }
+  .close{
+    @media (min-width: 1440px) {
+      font-size: 80px;
+    }
+  }
   ul{
     margin: 5rem 4rem;
+    @media (min-width: 1440px) {
+      margin-top: 10rem;
+    }
+    li{
+      @media (min-width: 1440px) {
+        font-size: 60px;
+      }
+      span{
+        @media (min-width: 1440px) {
+          font-size: 40px;
+        }
+      }
+    }
   }
 }
 .mob-menu.active, .tablet-menu.active{
@@ -100,6 +121,10 @@
   border: 1px solid gray;
   transition: .3s;
   z-index: 999;
+  @media (min-width: 1440px) {
+    width: 340px;
+    height: 330px;
+  }
   .close{
     position: absolute;
     font-size: 3rem;
@@ -114,6 +139,10 @@
     margin-top: 30px;
     margin-left: 50%;
     transform: translateX(-50%);
+    @media (min-width: 1440px) {
+      width: 70px;
+      height: 70px;
+    }
   }
   p{
     text-align: center;
