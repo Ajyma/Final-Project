@@ -21,11 +21,12 @@ function Card({base}){
           <p className={cls.cardTitle}>{base.title}</p>
           
           <div className={cls.url}>
-            <Link className={cls.btnMore} to={`/more/${base.id}`}>Подробнее</Link>
-            <ul className={cls.iconList}>
-              <li><BsHeart/></li>
-              <li><AiOutlineShoppingCart/></li>
-            </ul>
+            <Link  to={`/more/${base.id}`} className={cls.btnMore}>Подробнее</Link>
+        
+            <div className={cls.icons}>
+              <button className={cls.btn}><BsHeart/></button>
+              <button className={cls.btn}><AiOutlineShoppingCart/></button>
+            </div>
           </div>
         </div>
       </div>

@@ -21,7 +21,7 @@ function App() {
         <Route path='/auth/login' element={<Login/>}/>
         <Route path='/basket' element={<Basket/>}/>
         <Route path='/favorites' element={<Favorites/>}/>
-        <Route path='/more:id' element={<MorePage/>}/>
+        <Route path='/more/:id' element={<MorePage/>}/>
         <Route path='/' element={<Main/>}/>
       </Routes>
     </>

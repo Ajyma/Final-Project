@@ -6,7 +6,7 @@ body{
     justify-content: center;
     position: relative;
     margin-top: 5em;
-    height: 40vh;
+    height: 30vh;
     align-items: center;
     margin-top: 5%;
     .image{
@@ -24,9 +24,19 @@ body{
         opacity: 1;
     }
     @media screen and (min-width: 768px) {
-        height:60vh;
+        height:40vh;
     }
     @media screen and (min-width: 1024px) {
-        height:70vh;
+        height:50vh;
     }
+    @media screen and (min-width: 1500px) {
+        height:50vh;
+    }
+    
+}
+.centerDot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
 }

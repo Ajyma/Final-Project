@@ -2,6 +2,7 @@ import React from "react";
 import { SliderList } from "../../../utils/utils"; 
 import './Slider.scss'
 import { Btn } from "./Button";
+import Dot from "./Dot";
 
 export const Slider = () => {
 
@@ -30,6 +31,12 @@ export const Slider = () => {
                 }
                 <Btn direction='prev' handleSlide={prevSlide}/>
                 <Btn direction='next' handleSlide={nextSlide}/>
+            </div>
+
+            <div className="centerDot">
+                {
+                    Array.from({length:5}).map((dot , index) => <Dot index={index} sliderIndex={sliderIndex}/>)
+                }
             </div>
 
         </>

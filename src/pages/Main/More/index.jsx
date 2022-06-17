@@ -5,7 +5,7 @@ import {MdOutlineArrowBack} from 'react-icons/md'
 import {Link} from 'react-router-dom'
 import { getProduct } from "../../../DB";
 
-export const MorePage = ({base}) => {
+export const MorePage = () => {
     const {id} = useParams()
 
     const data = getProduct().find(item => item.id == id )
