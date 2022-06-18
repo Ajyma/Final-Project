@@ -22,5 +22,27 @@ body{
     .image.active{
         opacity: 1;
     }
-    
+}
+
+.centerDot{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.dotItem{
+  width: 5%;
+  height: 2px;
+  border-radius: 10px;
+  margin: 0 20px;
+  border: 2px solid #514A7E;
+  background-color: #514A7E;
+  transition: .5s;
+}
+.dotItem.active{
+  background-color: #514A7E !important;
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  border: none;
 }
