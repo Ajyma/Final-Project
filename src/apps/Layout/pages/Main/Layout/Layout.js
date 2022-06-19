@@ -1,15 +1,16 @@
 import React from "react";
-import { Slider } from "../../../components/Main/Slider/Slider";
+import Card from "../../../../../components/Main/Card/Card";
+import { Slider } from "../../../../../components/Main/Slider/Slider";
 import cls from './Layout.module.scss'
 import {BsArrowDown} from 'react-icons/bs'
-import Card from "../../../components/Main/Card/Card";
-import { getCards } from "../../../api";
+import {getAllCards} from '../../../../../api/'
 
 export const Layout = () => {
   const [data , setData] = React.useState(null)
 
   React.useEffect(() => {
-    setData(getCards())
+    // setData(getAllCards())
+    getAllCards().then(res => console.log(res))
   }, [])
   
   if(!data) return <p>Loading...</p>
@@ -21,19 +22,15 @@ export const Layout = () => {
       <div className={cls.container}>
         <div className={cls.row}>
           {
-            getCards().map(item => <Card key={item.id} base = {item}/>)
+            data?.map(item => <Card key={item.id} base ={item}/>)
           }
         </div>      
       </div>
 
-
-      
-
       <div className={cls.more}>
         <div className={cls.text}>
-          <div className={cls.textMore}>
-            <p><BsArrowDown/></p>
-          </div>
+          <p>Еще</p>
+          <p><BsArrowDown/></p>
         </div>
       </div>
     </div>

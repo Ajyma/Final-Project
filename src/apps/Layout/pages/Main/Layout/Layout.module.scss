@@ -1,0 +1,29 @@
+.layout{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 3% 0;
+    .row{
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+  }
+  .more{
+    display: flex;
+    padding-left: 47%;
+    .text{
+      padding: 20px 30px;
+      border-radius: 50%;
+      border: 1px solid black;
+      display: flex;
+      p{
+          font-size: 30px;
+      }
+    }
+  }
+}
