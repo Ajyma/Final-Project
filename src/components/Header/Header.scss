@@ -38,8 +38,29 @@
 }
 .tablet-menu{
   width: 300px;
+  @media (min-width: 1440px) {
+    width: 600px;
+  }
+  .close{
+    @media (min-width: 1440px) {
+      font-size: 80px;
+    }
+  }
   ul{
     margin: 5rem 4rem;
+    @media (min-width: 1440px) {
+      margin-top: 10rem;
+    }
+    li{
+      @media (min-width: 1440px) {
+        font-size: 60px;
+      }
+      span{
+        @media (min-width: 1440px) {
+          font-size: 40px;
+        }
+      }
+    }
   }
 }
 .mob-menu.active, .tablet-menu.active{
@@ -100,6 +121,10 @@
   border: 1px solid gray;
   transition: .3s;
   z-index: 999;
+  @media (min-width: 1440px) {
+    width: 150px;
+    height: 180px;
+  }
   .close{
     position: absolute;
     font-size: 3rem;
@@ -114,8 +139,13 @@
     margin-top: 30px;
     margin-left: 50%;
     transform: translateX(-50%);
+    @media (min-width: 1440px) {
+      width: 50px;
+      height: 50px;
+    }
   }
   p{
+    margin-top: 20px;
     text-align: center;
   }
   h4{
@@ -125,7 +155,7 @@
     justify-content: center;
     font-size: 15px;
     text-align: left;
-    padding-top: 25px;
+    padding-top: 10px;
     span{
       text-align: left;
     }
@@ -134,75 +164,4 @@
 .tabletProfile.active{
   top: 11%;
   z-index: 999;
-}
-
-
-.headerTablet{
-  height: 80vh;
-  margin-top: -3rem;
-  padding: 2rem 5rem;
-  @media (min-width: 1440px) {
-    height: 40vh;
-  }
-  @media (min-width: 2560px) {
-    height: 60vh;
-  }
-  .block{
-    display: flex;
-    justify-content: space-between;
-    .first_block{
-      h1{
-        margin: 30px 0;
-        font-weight: 300;
-        font-size: 39px;
-        line-height: 52px;
-        text-align: left;
-        @media (min-width: 1440px) {
-          font-size: 50px;
-        }
-      }
-      p{
-        color: #7D7D7D;
-        @media (min-width: 1440px) {
-          font-size: 35px;
-        }
-      }
-      img{
-        width: 250px;
-        height: 150px;
-        object-fit: cover;
-        @media (min-width: 1440px) {
-          width: 400px;
-          height: 350px;
-        }
-        @media (min-width: 1540px) {
-          width: 500px;
-          height: 450px;
-        }
-        @media (min-width: 2560px) {
-          width: 900px;
-          height: 850px;
-        }
-      }
-    }
-    .second_block{
-      img{
-        width: 300px;
-        height: 290px;
-        object-fit: cover;
-        @media (min-width: 1440px) {
-          width: 500px;
-          height: 500px;
-        }
-        @media (min-width: 1540px) {
-          width: 650px;
-          height: 650px;
-        }
-        @media (min-width: 2560px) {
-          width: 1000px;
-          height: 1000px;
-        }
-      }
-    }
-  }
 }

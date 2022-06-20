@@ -21,7 +21,7 @@ export const Layout = () => {
       <div className={cls.container}>
         <div className={cls.row}>
           {
-            getCards().map(item => <Card key={item.id} base = {item}/>)
+            data.map(item => <Card key={item.id} base = {item}/>)
           }
         </div>      
       </div>

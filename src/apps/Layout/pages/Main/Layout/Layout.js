@@ -3,22 +3,25 @@ import Card from "../../../../../components/Main/Card/Card";
 import { Slider } from "../../../../../components/Main/Slider/Slider";
 import cls from './Layout.module.scss'
 import {BsArrowDown} from 'react-icons/bs'
-import {getAllCards} from '../../../../../api/'
+import {getAllCards, getC, getCards} from '../../../../../api/'
 
 export const Layout = () => {
   const [data , setData] = React.useState(null)
 
   React.useEffect(() => {
     // setData(getAllCards())
-    getAllCards().then(res => console.log(res))
+    // setData(getCards())
+    getCards().then(res => console.log(res))
   }, [])
+
+  // const get = React.useCallback(() => {
+  //   getC(users)
+  // })
   
   if(!data) return <p>Loading...</p>
 
   return (
     <div className={cls.layout}>
-      <Slider/>
-
       <div className={cls.container}>
         <div className={cls.row}>
           {
@@ -29,8 +32,9 @@ export const Layout = () => {
 
       <div className={cls.more}>
         <div className={cls.text}>
-          <p>Еще</p>
-          <p><BsArrowDown/></p>
+          <div className={cls.textMore}>
+            <p><BsArrowDown/></p>
+          </div>
         </div>
       </div>
     </div>

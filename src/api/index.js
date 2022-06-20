@@ -1,3 +1,4 @@
 import { API } from "./api"
 
-export const getAllCards = () => API.get(`cards/`)
+export const getCards = () => API.get(`cards/`)
+export const getC = userId => API.get(`cards/${userId}`)
