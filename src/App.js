@@ -24,15 +24,15 @@ export default App;
 // import Basket from './pages/Basket';
 // import Favorites from './pages/Favorites';
 
- // return (
-  //   <>
-  //     <Routes>
-  //       <Route path='/' element={<Main/>}/>
-  //       <Route path='*' element={<Navigate to="/"/>}/>
-  //       <Route path='/auth/register' element={<Register/>}/>
-  //       <Route path='/auth/login' element={<Login/>}/>
-  //       <Route path='/basket' element={<Basket/>}/>
-  //       <Route path='/favorites' element={<Favorites/>}/>
-  //     </Routes>
-  //   </>
-  // );
+//  return (
+//     <>
+//       <Routes>
+//         <Route path='/' element={<Main/>}/>
+//         <Route path='*' element={<Navigate to="/"/>}/>
+//         <Route path='/auth/register' element={<Register/>}/>
+//         <Route path='/auth/login' element={<Login/>}/>
+//         <Route path='/basket' element={<Basket/>}/>
+//         <Route path='/favorites' element={<Favorites/>}/>
+//       </Routes>
+//     </>
+//   );

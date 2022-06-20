@@ -24,19 +24,21 @@ export const Slider = () => {
         }
     }
     return (
-      <>
-        <div className='sliderParent'>
-          {
-            SliderList.map((img , index) => <img src={img.url} alt='none' key={img.id} className={sliderIndex === index + 1 ?'image active' : 'image' }/>)
-          }
-          <Btn direction='prev' handleSlide={prevSlide}/>
-          <Btn direction='next' handleSlide={nextSlide}/>
-        </div>
-        <div className='centerDot'>
-          {
-            Array.from({length:5}).map((dot , index) => <Dot key={index} index={index} sliderIndex={sliderIndex}/>)
-          }
-        </div>
-      </>
-  )
+        <>
+            <div className='sliderParent'>
+                {
+                    SliderList.map((img , index) => <img src={img.url} alt='none' key={img.id} className={sliderIndex === index + 1 ?'image active' : 'image' }/>)
+                }
+                <Btn direction='prev' handleSlide={prevSlide}/>
+                <Btn direction='next' handleSlide={nextSlide}/>
+            </div>
+
+            <div className="centerDot">
+                {
+                    Array.from({length:5}).map((dot , index) => <Dot index={index} sliderIndex={sliderIndex}/>)
+                }
+            </div>
+
+        </>
+    )
 }

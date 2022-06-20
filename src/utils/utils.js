@@ -24,23 +24,6 @@ export const SliderList = [
 
 
 
-export const CardList = [
-    {
-        id: 1,
-        image: 'https://pngimg.com/uploads/running_shoes/running_shoes_PNG5823.png'
-    },
-    {
-        id: 1,
-        image: 'https://pngimg.com/uploads/running_shoes/running_shoes_PNG5823.png'
-    },
-    {
-        id: 1,
-        image: 'https://pngimg.com/uploads/running_shoes/running_shoes_PNG5823.png'
-    },
-    {
-        id: 1,
-        image: 'https://pngimg.com/uploads/running_shoes/running_shoes_PNG5823.png'
-    }
-]
+
 
 

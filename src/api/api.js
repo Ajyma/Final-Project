@@ -1,8 +1,8 @@
-const BASE_URL = 'https://final-project-7cd43-default-rtdb.asia-southeast1.firebasedatabase.app/'
+const BASE_URL = 'https://final-project-7cd43-default-rtdb.asia-southeast1.firebasedatabase.app'
 
 export const API = {
-  get: (url) => {
-    return fetch(`${BASE_URL}${url}.json`, {
+  get: (endPoint) => {
+    return fetch(`${BASE_URL}/${endPoint}.json`, {
       method: 'GET',
       headers: {
         'Content-type' : 'application/json'
