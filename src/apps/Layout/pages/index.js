@@ -1,6 +1,12 @@
 
 import Main from './Main/index'
+import Basket from './Basket'
+import Favorites from './Favorites'
+import Admin from './Admin'
 
 export {
-  Main
+  Basket,
+  Main,
+  Favorites,
+  Admin
 }

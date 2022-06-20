@@ -5,7 +5,7 @@ import * as AuthPages from '../../apps/Auth/pages'
 const AuthRoutes = () => {
   return (
     <React.Fragment>
-      <Routes>\
+      <Routes>
         <Route path='/auth/login' element={<AuthPages.Login/>}/>
         <Route path='/auth/register' element={<AuthPages.Register/>}/>
         <Route path='*' element={<Navigate to={'/auth/login'}/>}/>
