@@ -38,7 +38,7 @@
 }
 .tablet-menu{
   width: 300px;
-  @media (min-width: 1440px) {
+  @media (min-width: 1540px) {
     width: 600px;
   }
   .close{
@@ -52,11 +52,11 @@
       margin-top: 10rem;
     }
     li{
-      @media (min-width: 1440px) {
+      @media (min-width: 1540px) {
         font-size: 60px;
       }
       span{
-        @media (min-width: 1440px) {
+        @media (min-width: 1540px) {
           font-size: 40px;
         }
       }
@@ -164,4 +164,21 @@
 .tabletProfile.active{
   top: 11%;
   z-index: 999;
+}
+.containerCategory{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 3% 0;
+  .rowCategory{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.titleCategory{
+  text-transform: uppercase;
+  margin-top: 3rem;
+  margin: 0 5rem;
+  margin-bottom: -5rem;
 }

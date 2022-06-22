@@ -5,12 +5,27 @@ import { useMediaQuery } from 'react-responsive'
 
 const ChatWindow = ({isToggle, toggle}) => {
 
+  const [value, setValue] = React.useState('')
+
   const isMobile = useMediaQuery({
     query: "(max-width: 425px)"
   })
   const isOther = useMediaQuery({
     query: "(min-width: 768px)"
   })
+
+  const [isActive, setIsActive] = React.useState(false)
+
+  function sendMessage(text) {
+    return (
+      <>
+        <div className="blockPerson">
+          {text}
+        </div>
+        <div className="img"></div>
+      </>
+    )
+  }
 
   return (
     <React.Fragment>
@@ -34,8 +49,16 @@ const ChatWindow = ({isToggle, toggle}) => {
               </div>
             </div>
             <div className="footerChat">
-              <input type="text" name="" placeholder='Введите сообщение'/>
-              <AiOutlineSend/>
+              <input 
+                onInput={e => {
+                  setValue(e.target.value)
+                }}
+                type="text"
+                placeholder='Введите сообщение'
+              />
+              <div onClick={() => {}}>
+                <AiOutlineSend/>
+              </div>
             </div>
           </div>
         )
@@ -58,10 +81,15 @@ const ChatWindow = ({isToggle, toggle}) => {
                 <br />
                 Чем могу Вам помочь?
               </div>
+              {isActive && sendMessage(value)}
             </div>
             <div className="footerChat">
-              <input type="text" name="" placeholder='Введите сообщение'/>
-              <div>
+              <input 
+                onInput={e => setValue(e.target.value)}
+                type="text"
+                placeholder='Введите сообщение'
+              />
+              <div onClick={() => setIsActive(!isActive)}>
                 <AiOutlineSend/>
               </div>
             </div>  

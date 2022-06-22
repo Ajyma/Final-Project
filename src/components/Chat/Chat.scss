@@ -66,10 +66,11 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    flex-wrap: wrap;
     padding: 1rem 3rem;
     width: 100%;
     height: 100%;
-    .block{
+    .block, .blockPerson{
       box-shadow: 0 0 2px black;
       border-radius: 10px;
       padding: 5px;
@@ -77,6 +78,11 @@
       @media (min-width: 1540px) {
         font-size: 30px;
       }
+    }
+    .blockPerson{
+      margin-left: auto;
+      text-align: right;
+      width: auto;
     }
     .img{
       width: 40px;
