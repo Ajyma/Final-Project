@@ -50,11 +50,13 @@ const Navbar = () => {
         </div>
       </div>    
       <div className={cls.container}>
-        {
-          finded?.length < 20 ? finded.map(({name, price, category, basket, favorite, url, id}) => {
-            return <CardTemplate key={id} name={name} price={price} category={category} basket={basket} favorite={favorite} url={url} id={id}/>
-          }) : ''
-        }
+        <div className={cls.row}>
+          {
+            finded?.length < 20 ? finded.map(({name, price, category, basket, favorite, url, id}) => {
+              return <CardTemplate key={id} name={name} price={price} category={category} basket={basket} favorite={favorite} url={url} id={id}/>
+            }) : ''
+          }
+        </div>
       </div>
       <List isToggle={isToggle} toggle={toggle}/>
     </>

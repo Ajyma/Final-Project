@@ -29,10 +29,30 @@ const List = ({isToggle, toggle}) => {
           <div className={isToggle ? 'mob-menu active' : 'mob-menu'}>
             <span onClick={toggle} className='close'>&times;</span>
             <ul className='list'>
-              <li onClick={() => setValue('woman')}> <span><IoWomanOutline/></span> Женщинам</li>
-              <li onClick={() => setValue('woman')}> <span><IoManOutline/></span> Мужчинам</li>
-              <li onClick={() => setValue('woman')}> <span><MdChildCare/></span> Детям</li>
-              <li onClick={() => setValue('woman')}> <span><GiConverseShoe/></span> Обувь</li>
+              <li onClick={() => {
+                setValue('woman')
+              }}> 
+                <span><IoWomanOutline/></span> 
+                Женщинам
+              </li>
+              <li onClick={() => {
+                setValue('man')
+              }}> 
+                <span><IoManOutline/></span>
+                Мужчинам
+              </li>
+              <li onClick={() => {
+                setValue('kid')
+              }}> 
+                <span><MdChildCare/></span> 
+                Детям
+              </li>
+              <li onClick={() => {
+                setValue('shoes')
+              }}> 
+                <span><GiConverseShoe/></span> 
+                Обувь
+              </li>
             </ul>
           </div>
         )
@@ -42,10 +62,30 @@ const List = ({isToggle, toggle}) => {
           <div className={isToggle ? 'tablet-menu active' : 'tablet-menu'}>
             <span onClick={toggle} className='close'>&times;</span>
             <ul className='list'>
-              <li onClick={() => setValue('woman')}> <span><IoWomanOutline/></span> Женщинам</li>
-              <li onClick={() => setValue('man')}> <span><IoManOutline/></span> Мужчинам</li>
-              <li onClick={() => setValue('kid')}> <span><MdChildCare/></span> Детям</li>
-              <li onClick={() => setValue('shoes')}> <span><GiConverseShoe/></span> Обувь</li>
+              <li style={value == 'woman' ? {color: '#514A7E'} : {color: 'white'}} onClick={() => {
+                setValue('woman')
+              }}> 
+                <span><IoWomanOutline/></span> 
+                Женщинам
+              </li>
+              <li style={value == 'man' ? {color: '#514A7E'} : {color: 'white'}} onClick={() => {
+                setValue('man')
+              }}> 
+                <span><IoManOutline/></span> 
+                Мужчинам
+              </li>
+              <li style={value == 'kid' ? {color: '#514A7E'} : {color: 'white'}} onClick={() => {
+                setValue('kid')
+              }}> 
+                <span><MdChildCare/></span> 
+                Детям
+              </li>
+              <li style={value == 'shoes' ? {color: '#514A7E'} : {color: 'white'}} onClick={() => {
+                setValue('shoes')
+              }}> 
+                <span><GiConverseShoe/></span> 
+                Обувь
+              </li>
             </ul>
           </div>
         )
