@@ -61,12 +61,18 @@ const ChatWindow = ({isToggle, toggle}) => {
               </div>
             </div>
             <div className="mainChat">
-              <div className="img"></div>
-              <div className="block">
-                Здраствуйте
-                <br />
-                Чем могу Вам помочь?
-              </div>
+              {messages?.map(message => (
+                <div key={message.text} className={users.uid === message.uid ? 'mainBlock' : 'otherBlock'}>
+                  <div className='userBlock'>
+                    <img src={message.photo} className='photoUrl' alt="" />
+                  </div>
+                  <div className='block'>
+                    <h5>{message.name}</h5>
+                    <p>{message.text}</p>
+                    <p className='time'>{message.time.hour}:{message.time.minute.toString().length == 1 ? `0${message.time.minute}` : message.time.minute}</p>
+                  </div>
+                </div>
+              ))}
             </div>
             <div className="footerChat">
               <input 
@@ -95,10 +101,11 @@ const ChatWindow = ({isToggle, toggle}) => {
                 <div key={message.text} className={users.uid === message.uid ? 'mainBlock' : 'otherBlock'}>
                   <div className='userBlock'>
                     <img src={message.photo} className='photoUrl' alt="" />
-                    <h5>{message.name}</h5>
                   </div>
                   <div className='block'>
+                    <h5>{message.name}</h5>
                     <p>{message.text}</p>
+                    <p className='time'>{message.time.hour}:{message.time.minute.toString().length == 1 ? `0${message.time.minute}` : message.time.minute}</p>
                   </div>
                 </div>
               ))}
