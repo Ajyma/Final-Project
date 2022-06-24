@@ -9,8 +9,17 @@ export const API = {
       }
     }).then(r => r.json())
   },
-  post: (url, data) => {
-    fetch(`${BASE_URL}${url}.json`, {
+
+  getSingleCard: (endPoint , id) => {
+    return fetch(`${BASE_URL}/${endPoint}/${id}.json`, {
+      method: 'GET',
+      headers: {
+        'Content-type' : 'application/json'
+      }
+    }).then(r => r.json())
+  },
+  post: (endPoint, data) => {
+    fetch(`${BASE_URL}${endPoint}.json`, {
       method: 'POST',
       body: JSON.stringify(data),
       headers: {
@@ -18,17 +27,19 @@ export const API = {
       }
     }).then(r => r.json())
   },
-  patch: (url, data) => {
-    return fetch(`${BASE_URL}${url}`, {
+  patch: (endPoint,cardId ,  data) => {
+    return fetch(`${BASE_URL}/${endPoint}/${cardId}`, {
       method: 'PATCH',
       body: JSON.stringify(data),
       headers: {
         'Content-type':'application/json'
       }
     })
+    .then(res => res.json())
   },
-  delete: url => {
-    return fetch(`${BASE_URL}${url}`, {
+
+  delete: endPoint => {
+    return fetch(`${BASE_URL}${endPoint}`, {
       method:'DELETE',
       headers: {
         'Content-type':'application/json'

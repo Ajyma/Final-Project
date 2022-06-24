@@ -20,10 +20,10 @@ const List = ({isToggle, toggle}) => {
           <div className={isToggle ? 'mob-menu active' : 'mob-menu'}>
             <span onClick={toggle} className='close'>&times;</span>
             <ul className='list'>
-              <li> <span><IoWomanOutline/></span> Женщинам</li>
-              <li> <span><IoManOutline/></span> Мужчинам</li>
-              <li> <span><MdChildCare/></span> Детям</li>
-              <li> <span><GiConverseShoe/></span> Обувь</li>
+              <li onClick={() => {}}> <span><IoWomanOutline/></span> Женщинам</li>
+              <li onClick={() => {}}> <span><IoManOutline/></span> Мужчинам</li>
+              <li onClick={() => {}}> <span><MdChildCare/></span> Детям</li>
+              <li onClick={() => {}}> <span><GiConverseShoe/></span> Обувь</li>
             </ul>
           </div>
         )

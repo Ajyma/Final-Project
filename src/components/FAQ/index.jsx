@@ -10,8 +10,8 @@ const FAQ = () => {
       <span>FAQ</span>
       <div className={cls.accordion}>
         <div>
-          {DropdownList.map(({ title, desc }) => (
-            <Accordion title={title} desc={desc} />
+          {DropdownList.map(({ id, title, desc }) => (
+            <Accordion key={id} title={title} desc={desc} />
           ))}
         </div>
       </div>

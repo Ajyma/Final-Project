@@ -1,10 +1,15 @@
 import React from 'react'
-import Navbar from '../../../components/Header/Navbar/Navbar'
+import Navbar from '../../../../components/Header/Navbar/Navbar'
 import { useMediaQuery } from 'react-responsive'
-import IsMobile from '../../../components/Header/IsMobile'
+import IsMobile from '../../../../components/Header/IsMobile'
 import cls from './Favorites.module.scss'
+import { IoMdArrowBack } from 'react-icons/io'
+import { useNavigate } from 'react-router-dom'
 
 const Favorites = () => {
+
+  const navigate = useNavigate()
+
   const isMobile = useMediaQuery({
     query: "(max-width: 425px)"
   })
@@ -25,7 +30,12 @@ const Favorites = () => {
         isTablet && (
           <>
             <Navbar/>
-            <h1>Избранное</h1>
+            <div className={cls.headerBlock}>
+              <div className={cls.goBack} onClick={() => navigate('/')}>
+                <IoMdArrowBack/>
+              </div>
+              <h1>Избранное</h1>
+            </div>
           </>
         )
       }

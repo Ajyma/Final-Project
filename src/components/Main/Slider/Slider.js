@@ -35,7 +35,7 @@ export const Slider = () => {
 
             <div className="centerDot">
                 {
-                    Array.from({length:5}).map((dot , index) => <Dot index={index} sliderIndex={sliderIndex}/>)
+                    Array.from({length:5}).map((dot , index) => <Dot key={index} index={index} sliderIndex={sliderIndex}/>)
                 }
             </div>
 

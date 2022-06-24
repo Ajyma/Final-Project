@@ -1,25 +1,27 @@
 import React from 'react'
 import { Routes, Route , useNavigate } from 'react-router-dom';
 import * as LayoutPages from '../../apps/Layout/pages/'
-import Basket from './Basket/index'
-import Favorites from './Favorites/index'
 import { useAuth } from '../../providers/useAuth';
+import { MorePage } from '../../components/Main/More';
 
 const LayoutRoutes = () => {
+  
   const { users } = useAuth()
 
   const navigate = useNavigate()
 
   React.useEffect(() => {
-    users && navigate('/')
+    users && navigate('/') 
   }, [users])
 
   return (
     <React.Fragment>
       <Routes>
         <Route path='/' element={<LayoutPages.Main/>}/>
-        <Route path='/basket' element={<Basket/>}/>
-        <Route path='/favorits' element={<Favorites/>}/>
+        <Route path='/basket' element={<LayoutPages.Basket/>}/>
+        <Route path='/favorites' element={<LayoutPages.Favorites/>}/>
+        <Route path='/admin' element={<LayoutPages.Admin/>}/>
+        <Route path='/more/:id' element={<MorePage/>}/>
       </Routes>
     </React.Fragment>
   )
