@@ -1,4 +1,3 @@
-import { async } from "@firebase/util";
 import { initializeApp } from "firebase/app";
 import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth'
 
@@ -36,7 +35,7 @@ export const handleRegisterWithEmailAndPassword = async (useremail, userpassword
       photoURL:photo
     })
   }catch{
-
+    
   }
 }
 
