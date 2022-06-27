@@ -1,8 +1,8 @@
 import React from 'react'
 import { Routes, Route , useNavigate } from 'react-router-dom';
 import * as LayoutPages from '../../apps/Layout/pages/'
-import { useAuth } from '../../providers/useAuth';
 import { MorePage } from '../../components/Main/More';
+import { useAuth } from '../../providers/useAuth';
 
 const LayoutRoutes = () => {
   

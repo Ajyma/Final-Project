@@ -5,8 +5,12 @@ import IsMobile from '../../../../components/Header/IsMobile'
 import { IoMdArrowBack } from 'react-icons/io'
 import { useNavigate } from 'react-router-dom'
 import cls from './Basket.module.scss'
+import useCards from '../../../../components/Main/Card/useCards'
+import CardTemplate from '../../../../components/Main/Card/CardTemplate'
+import Card from '../../../../components/Main/Card'
 
 const Basket = () => {
+  const { cards } = useCards()
 
   const navigate = useNavigate()
 
@@ -35,6 +39,11 @@ const Basket = () => {
                 <IoMdArrowBack/>
               </div>
               <h1>Корзина</h1>
+              <div className={cls.container}>
+                <div className={cls.row}>
+                  
+                </div>
+              </div>
             </div>
           </>
         )

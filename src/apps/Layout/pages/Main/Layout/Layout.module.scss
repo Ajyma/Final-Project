@@ -2,102 +2,22 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   .container{
-    width: 100%;
+    width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 3% 0;
-    .row{
-      width: 80%;
+    @media screen and (min-width:768px) {
+      width: 100%;
+    }
+      .row{
+      width: 100%;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      .card{
-        width: 250px;
-        height: 400px;
-        margin: 10px 15px;
-        padding: 5px 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        @media screen and (min-width:768px) {
-          width: 200px;
-        }
-        @media screen and (min-width:1400px) {
-          width: 300px;
-        }
-        .cardImg{
-          width: 220px;
-          height: 150px;
-          padding: 10px;
-          margin: 10px 20px;
-          @media screen and (min-width:768px) {
-            width: 180px;
-          }
-          @media screen and (min-width:1400px) {
-            width: 270px;
-            height: 320px;
-          }
-          .image{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-          }
-        }
-        .cardBody{
-          margin-top: -7px;
-          p{
-            margin-left: 25px;
-          }
-          .price{
-            font-size: 20px;
-          }
-          .cardTitle{
-            font-size: 17px;
-            color: rgb(136, 133, 133);
-          }
-          .url{
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            margin-left: 10px;
-            .btnMore{
-              border: 1px solid black;
-              padding: 7px 10px;
-              font-size: 15px;
-              text-decoration: none;
-              color: black;
-              @media screen and (min-width:1400px) {
-                font-size: 20px;
-              }
-            }
-    
-            .iconList{
-              list-style: none;
-              display: flex;
-              li{
-                font-size: 25px;
-                padding: 0 10px;
-                cursor: pointer;
-              }
-            }
-          }
-        }
-      }    
-    }
-  }
-  .more{
-    display: flex;
-    justify-content: center;
-    .text{
-      padding: 10px 15px;
-      border: 1px solid black;
-      border-radius: 50%;
-      .textMore{
-        font-size: 25px;
-      }
     }
   }
 }

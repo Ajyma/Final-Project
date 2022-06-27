@@ -9,19 +9,19 @@ export const Slider = () => {
     const [sliderIndex , setSliderIndex] = React.useState(1)
 
     const prevSlide = () => {
-        if(sliderIndex !== 1){
-            setSliderIndex(sliderIndex - 1)
-        }else if(sliderIndex === 1){
-            setSliderIndex(SliderList.length)
-        }
+      if(sliderIndex !== 1){
+        setSliderIndex(sliderIndex - 1)
+      }else if(sliderIndex === 1){
+        setSliderIndex(SliderList.length)
+      }
     }
 
     const nextSlide = () => {
-        if(sliderIndex !== SliderList.length){
-            setSliderIndex(sliderIndex + 1)
-        }else if(sliderIndex === SliderList.length){
-            setSliderIndex(1)
-        }
+      if(sliderIndex !== SliderList.length){
+        setSliderIndex(sliderIndex + 1)
+      }else if(sliderIndex === SliderList.length){
+        setSliderIndex(1)
+      }
     }
     return (
         <>

@@ -2,6 +2,9 @@
   display: flex;
   justify-content: space-between;
   padding: 2rem 5rem;
+  @media (max-width: 1024px) {
+    margin-bottom: 2rem;
+  }
   .bars{
     font-size: 20px;
     cursor: pointer;
@@ -35,5 +38,16 @@
     @media (min-width: 1540px) {
       font-size: 30px;
     }
+  }
+}
+.container{
+  right: 0;
+  position: fixed;
+  z-index: 999;
+  background-color: white;
+  .row{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }

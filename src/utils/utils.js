@@ -13,11 +13,11 @@ export const SliderList = [
     },
     {
         id: 4,
-        url: 'https://cdnn21.img.ria.ru/images/07e5/0c/07/1762635818_0:0:3071:1727_1920x0_80_0_0_f719b1ed3037d48b05808b16362d7def.jpg'
+        url: 'https://www.kp40.ru/pictures/releases/68757/picture-845h.jpg'
     },
     {
         id: 5,
-        url: 'https://www.ferra.ru/imgs/2021/01/11/22/4449605/4d6bd6ad64e39612bea0e3b693a2a698d1349eca.jpg'
+        url: 'https://s.057.ua/section/newsIcon/upload/images/news/icon/000/052/317/68387478_5f1004e515343.jpg'
     }
 ]
 

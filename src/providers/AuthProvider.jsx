@@ -14,9 +14,10 @@ const AuthProvider = ({children}) => {
       if (user){
         setLoading(false)
         setUsers({
+          uid: user.uid,
           email:user.email,
           name:user.displayName,
-          photo:user.photoURL 
+          photo:user.photoURL
         })
       } else {
         setLoading(false)

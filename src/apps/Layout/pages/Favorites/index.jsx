@@ -5,8 +5,11 @@ import IsMobile from '../../../../components/Header/IsMobile'
 import cls from './Favorites.module.scss'
 import { IoMdArrowBack } from 'react-icons/io'
 import { useNavigate } from 'react-router-dom'
+import useCards from '../../../../components/Main/Card/useCards'
+import CardTemplate from '../../../../components/Main/Card/CardTemplate'
 
 const Favorites = () => {
+  const { cards } = useCards()
 
   const navigate = useNavigate()
 
@@ -35,6 +38,11 @@ const Favorites = () => {
                 <IoMdArrowBack/>
               </div>
               <h1>Избранное</h1>
+              <div className={cls.container}>
+                <div className={cls.row}>
+                  
+                </div>
+              </div>
             </div>
           </>
         )

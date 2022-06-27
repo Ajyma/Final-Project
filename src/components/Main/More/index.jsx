@@ -3,12 +3,12 @@ import { useParams } from 'react-router-dom';
 import cls from './More.module.scss'
 import {MdOutlineArrowBack} from 'react-icons/md'
 import {Link} from 'react-router-dom'
-import { getProduct } from "../../../DB";
+import { getCards, getSingleCard} from "../../../api";
 
 export const MorePage = () => {
     const {id} = useParams()
 
-    const data = getProduct().find(item => item.id == id )
+    const data = getCards().find(item => item.id == id )
     return (
         <div className={cls.moreCard}>
             <div>
