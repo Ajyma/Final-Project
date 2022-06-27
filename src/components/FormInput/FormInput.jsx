@@ -19,6 +19,7 @@ const FormInput = (
         onChange={(e) => setInputsValue(e.target.value)}
         name={name}
         className={cls.input}
+        autoComplete='on'
       />
     </div>
   )

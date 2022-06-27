@@ -1,6 +1,5 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import FormButton from '../../../../../components/FormButton/FormButton'
 import FormInput from '../../../../../components/FormInput/FormInput'
 import { handleLoginWithEmailAndPassword, handleLoginWithGoogle } from '../../../../../firebase'
 import cls from './Login.module.scss'
@@ -31,11 +30,15 @@ const EmailAndPasswordLogin = () => {
         />
 
         <div>
-          <FormButton  
+          <button
             className={cls.go}
-            handleSubmit={() => {
-            handleLoginWithEmailAndPassword(email, password)
-          }}/>
+            onClick={e => {
+              e.preventDefault()
+              handleLoginWithEmailAndPassword(email, password)
+            }
+          }>
+            Отправить
+          </button>
           <button 
             onClick={() => navigate('/auth/register')} 
             className={cls.signIn}
